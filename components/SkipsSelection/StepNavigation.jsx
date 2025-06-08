@@ -9,16 +9,17 @@ export default function StepNavigation({ handleNextStep, handlePreviousStep }) {
   return (
     <div className="w-full fixed bottom-0 bg-white p-3 sm:p-4 z-10 border-t border-gray-200 shadow-md">
       <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-4 px-2 sm:px-4">
-        {/* Small screens: Skip info on top */}
-        <div className="block sm:hidden text-center">
-          <div className="text-xs sm:text-sm">
-            {selectedSkip?.size} Yard Skip
+        {selectedSkip && (
+          <div className="block sm:hidden text-center">
+            <div className="text-xs sm:text-sm">
+              {selectedSkip?.size} Yard Skip
+            </div>
+            <div className="text-base font-semibold">
+              Total: £{selectedSkip?.totalPrice.toFixed(2)}{" "}
+              <span className="font-normal text-xs">(incl. VAT)</span>
+            </div>
           </div>
-          <div className="text-base font-semibold">
-            Total: £{selectedSkip?.totalPrice.toFixed(2)}{" "}
-            <span className="font-normal text-xs">(incl. VAT)</span>
-          </div>
-        </div>
+        )}
 
         {/* Button group + Centered skip info for large screens */}
         <div className="flex gap-4 sm:flex-row sm:items-center justify-between w-full sm:gap-4">
@@ -30,14 +31,15 @@ export default function StepNavigation({ handleNextStep, handlePreviousStep }) {
             Previous
           </button>
 
-          {/* Large screens only: Centered skip info */}
-          <div className="hidden sm:flex flex-col text-center">
-            <div className="text-sm">{selectedSkip?.size} Yard Skip</div>
-            <div className="text-base font-semibold">
-              Total: £{selectedSkip?.totalPrice.toFixed(2)}{" "}
-              <span className="font-normal text-xs">(incl. VAT)</span>
+          {selectedSkip && (
+            <div className="hidden sm:flex flex-col text-center">
+              <div className="text-sm">{selectedSkip?.size} Yard Skip</div>
+              <div className="text-base font-semibold">
+                Total: £{selectedSkip?.totalPrice.toFixed(2)}{" "}
+                <span className="font-normal text-xs">(incl. VAT)</span>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Next button */}
           <button
