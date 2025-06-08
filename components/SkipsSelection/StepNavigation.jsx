@@ -25,7 +25,7 @@ export default function StepNavigation({ handleNextStep, handlePreviousStep }) {
           {/* Previous button */}
           <button
             onClick={handlePreviousStep}
-            className="w-full sm:w-auto text-base sm:text-sm bg-white text-blue-500 px-4 py-3 sm:py-2 rounded-md border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 duration-300 hover:scale-105 transition-all active:scale-95"
+            className="w-full sm:w-auto text-base sm:text-sm bg-white text-blue-500 px-4 py-3 sm:py-2 rounded-md border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 duration-300 hover:scale-105 transition-all active:scale-95 cursor-pointer"
           >
             Previous
           </button>
@@ -42,7 +42,7 @@ export default function StepNavigation({ handleNextStep, handlePreviousStep }) {
           {/* Next button */}
           <button
             onClick={handleNextStep}
-            className="w-full sm:w-auto text-base sm:text-sm bg-blue-500 text-white px-4 py-3 sm:py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500 border border-transparent duration-300 hover:scale-105 transition-all active:scale-95"
+            className="w-full sm:w-auto text-base sm:text-sm bg-blue-500 text-white px-4 py-3 sm:py-2 rounded-md hover:bg-white hover:text-blue-500 hover:border-blue-500 border border-transparent duration-300 hover:scale-105 transition-all active:scale-95 cursor-pointer"
           >
             Continue
           </button>

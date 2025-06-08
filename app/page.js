@@ -1,17 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import skips from "@/data/skips";
 import SideBar from "@/components/SkipsSelection/sideBar";
 import SkipsList from "@/components/SkipsSelection/SkipsList";
 import StepNavigation from "@/components/SkipsSelection/StepNavigation";
 
 export default function Home() {
-  const [selectedSkip, setSelectedSkip] = useState(null);
-  const [skipCount, setSkipCount] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(2);
 
   const handleNextStep = () => {
     if (step < 5) {
