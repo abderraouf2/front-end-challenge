@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Front-End Challenge – Skip Selection Redesign
 
-## Getting Started
+## 🧠 My Approach
 
-First, run the development server:
+The goal of this challenge was to redesign the "Choose Your Skip Size" page while maintaining its core functionality. Here's how I approached it:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- I started by analyzing the original page to understand its structure and flow.
+- I then created a new layout from scratch, focusing on improving responsiveness, user experience, and modern visual design.
+- I used the API provided (`https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft`) to dynamically fetch and render skip options.
+- I ensured the new design works well on both mobile and desktop screens using responsive CSS and layout techniques.
+- To handle state management across components, I used the React Context API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **React** (Functional Components & Hooks)
+- **React Context API** – for managing global skip selection state
+- **LocalStorage** – to persist the selected skip across refreshes
+- **CSS / SCSS / Styled Components** – for styling (specify based on what you used)
+- **Axios / Fetch API** – for retrieving skip data from the backend
+- **Vite / Create React App / Next.js** – (mention the tooling you used to scaffold the project)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Design Decisions & Assumptions
 
-## Learn More
+- I used **localStorage** to persist the selected skip so the selection remains even after refreshing or navigating away.
+- I implemented **React Context** to manage and share skip selection state throughout the app efficiently.
+- I assumed that the API will always return a valid and complete list of skips based on location.
+- I focused on **improving UI clarity**, ensuring that skip options are visually distinct, easy to select, and mobile-friendly.
+- Accessibility was considered in basic form elements and layout but could be further enhanced in future iterations.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
