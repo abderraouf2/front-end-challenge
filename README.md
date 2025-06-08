@@ -1,30 +1,35 @@
-# React Front-End Challenge – Skip Selection Redesign
+# 🌱 Skip Selection Page Redesign – React Front-End Challenge
 
-## 🧠 My Approach
+## 🧠 Approach
 
-The goal of this challenge was to redesign the "Choose Your Skip Size" page while maintaining its core functionality. Here's how I approached it:
+This project is a redesign of the "Choose Your Skip Size" page from [wewantwaste.co.uk](https://wewantwaste.co.uk). The goal was to improve the UI/UX while keeping the functionality intact.
 
-- I started by analyzing the original page to understand its structure and flow.
-- I then created a new layout from scratch, focusing on improving responsiveness, user experience, and modern visual design.
-- I used the API provided (`https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft`) to dynamically fetch and render skip options.
-- I ensured the new design works well on both mobile and desktop screens using responsive CSS and layout techniques.
-- To handle state management across components, I used the React Context API.
+Here's how I approached the challenge:
+
+- Rebuilt the skip selection page using **Next.js** and **React functional components**.
+- Fetched skip data from the provided API:  
+  `https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft`
+- Ensured full **responsiveness** across desktop and mobile devices.
+- Used **React Context API** to manage the selected skip state globally across the app.
+- Stored the selected skip in **localStorage** to persist selection across page reloads.
 
 ## ⚙️ Technologies Used
 
-- **React** (Functional Components & Hooks)
-- **React Context API** – for managing global skip selection state
-- **LocalStorage** – to persist the selected skip across refreshes
-- **CSS / SCSS / Styled Components** – for styling (specify based on what you used)
-- **Axios / Fetch API** – for retrieving skip data from the backend
-- **Vite / Create React App / Next.js** – (mention the tooling you used to scaffold the project)
+- **Next.js** – React framework for building the application
+- **React (Hooks & Context API)** – for component logic and state management
+- **localStorage** – to persist selected skip
+- **Fetch API** – to retrieve skip data from the API
+- **CSS Modules / SCSS** – (update this to your exact styling method)
+- **Responsive design principles** – for mobile/desktop support
 
 ## 🎨 Design Decisions & Assumptions
 
-- I used **localStorage** to persist the selected skip so the selection remains even after refreshing or navigating away.
-- I implemented **React Context** to manage and share skip selection state throughout the app efficiently.
-- I assumed that the API will always return a valid and complete list of skips based on location.
-- I focused on **improving UI clarity**, ensuring that skip options are visually distinct, easy to select, and mobile-friendly.
-- Accessibility was considered in basic form elements and layout but could be further enhanced in future iterations.
+- The page was completely redesigned with a clean and modern layout for better usability.
+- Skip options are displayed clearly with improved spacing, hierarchy, and mobile accessibility.
+- Used **Context API** instead of prop drilling to manage the selected skip across components.
+- **localStorage** is used to retain the user's selected skip after refreshing the page.
+- Assumed the skip data from the API would always be valid and available.
+- Focused on usability, visual clarity, and maintainable code structure.
 
 ---
+
