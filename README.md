@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌿 Skip Selection Page Redesign – React Front-End Challenge
 
-## Getting Started
+## 🧠 My Approach
 
-First, run the development server:
+This project is a full redesign of the "Choose Your Skip Size" page from [wewantwaste.co.uk](https://wewantwaste.co.uk). The goal was to improve the UI/UX while preserving the page's original functionality.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Key Implementation Details:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Built with **Next.js** and **React functional components**.
+- Used the API:  
+  `https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft`  
+  to fetch and render skip options dynamically.
+- Applied **Tailwind CSS** for a clean, responsive design that works on both desktop and mobile devices.
+- Used **React Context API** to manage the selected skip globally across the app.
+- Persisted the selected skip in **localStorage** so it remains after a page refresh.
+- Integrated **Lenis** to enable smooth, hardware-accelerated scrolling for a more polished user experience.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** – framework for React with server-side rendering and routing
+- **React** – with hooks and context for state management
+- **Tailwind CSS** – utility-first styling and responsive design
+- **React Context API** – to share the selected skip state across components
+- **localStorage** – to persist the selected skip after reload
+- **Lenis** – for smooth scrolling animation
+- **Fetch API** – to retrieve live data from the skip API
 
-## Learn More
+## 🎨 Design Decisions & Assumptions
 
-To learn more about Next.js, take a look at the following resources:
+- The skip selection page was redesigned for a more modern and user-friendly layout.
+- Skip cards are visually clean and responsive across screen sizes.
+- Smooth scrolling with **Lenis** enhances user experience, especially on long pages or mobile devices.
+- The global skip state is handled via **Context**, avoiding prop drilling.
+- Assumed API responses would be valid and consistently structured.
+- Prioritized simplicity, accessibility, and maintainability in code and design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
