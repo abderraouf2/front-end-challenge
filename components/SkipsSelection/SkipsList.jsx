@@ -7,7 +7,7 @@ export default function SkipsList() {
   const { selectedSkip, selectSkip } = useSkip();
 
   return (
-    <div className="w-full p-4 bg-white rounded-lg h-full shadow-xl mb-16 border-2 border-gray-200 mb-30 sm:mb-20 ">
+    <div className="w-full p-4 bg-white rounded-lg h-full shadow-xl border-2 border-gray-200  ">
       <h2 className="text-2xl font-bold mb-4 text-center">
         Choose Your Skip Size
       </h2>

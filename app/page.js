@@ -77,7 +77,7 @@ export default function Home() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="bg-white h-full w-full rounded-lg p-4 border-2 border-gray-200"
+              className="bg-white h-full w-full rounded-lg p-4 border-2 border-gray-200 mb-30 sm:mb-20"
             >
               {getStepContent(step)}
             </motion.div>
