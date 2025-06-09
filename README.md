@@ -35,3 +35,11 @@ This project is a full redesign of the "Choose Your Skip Size" page from [wewant
 - Prioritized simplicity, accessibility, and maintainability in code and design.
 
 ---
+
+## 🔗 Live Preview & Sandbox
+
+- 🚀 **Live Preview (Vercel):** [https://front-end-challenge-ivory.vercel.app/](https://front-end-challenge-ivory.vercel.app/)
+- 🧪 **Testable Sandbox (CodeSandbox):** [https://codesandbox.io/p/github/abderraouf2/front-end-challenge/main?import=true](https://codesandbox.io/p/github/abderraouf2/front-end-challenge/main?import=true)
+
+
+----
