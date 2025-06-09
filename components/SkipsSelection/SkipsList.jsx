@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SkipCard from "./SkipCard";
-import skips from "@/data/skips";
 import { useSkip } from "@/contexts/SkipContext";
 
 export default function SkipsList() {
   const { selectedSkip, selectSkip } = useSkip();
+  const [skips, setSkips] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft"
+    )
+      .then((res) => res.json())
+      .then((data) => setSkips(data))
+      .catch((err) => console.error("Failed to fetch skips:", err));
+  }, []);
 
   return (
     <div className="w-full p-4 bg-white rounded-lg h-full shadow-xl border-2 border-gray-200  ">
